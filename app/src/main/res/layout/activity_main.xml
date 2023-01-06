@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/IV_Background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fun_card_background" />
+
+    <ImageView
+        android:id="@+id/IV_computer_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/IV_user_card"
+        app:layout_constraintEnd_toEndOf="@+id/IV_user_card"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/IV_user_card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.725"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/IV_user_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:onClick="flipAllCards"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/TV_user_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your card:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/IV_user_card"
+        app:layout_constraintEnd_toEndOf="@+id/IV_user_card"
+        app:layout_constraintStart_toStartOf="@+id/IV_user_card" />
+
+    <TextView
+        android:id="@+id/TV_computer_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer's card:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/IV_computer_card"
+        app:layout_constraintEnd_toEndOf="@+id/IV_computer_card"
+        app:layout_constraintStart_toStartOf="@+id/IV_computer_card" />
+
+    <Button
+        android:id="@+id/BTN_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:onClick="restart"
+        android:text="Restart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IV_user_card"
+        app:layout_constraintVertical_bias="0.907" />
+
+    <TextView
+        android:id="@+id/TV_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/BTN_restart"
+        app:layout_constraintEnd_toEndOf="@+id/BTN_restart"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/BTN_restart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
